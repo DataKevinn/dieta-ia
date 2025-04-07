@@ -1,0 +1,137 @@
+/* Base */
+body {
+    background-color: #0f0f0f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container centralizado */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #161616;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 170, 255, 0.15);
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #00aaff;
+    margin-bottom: 30px;
+}
+
+/* Texto explicativo */
+p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Formulário em coluna */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Rótulo dos inputs */
+label {
+    font-weight: 600;
+    color: #00ccff;
+    margin-bottom: 5px;
+}
+
+/* Inputs e selects */
+input, select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #2c2c2c;
+    background-color: #202020;
+    color: #ffffff;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #00aaff;
+}
+
+/* Botão */
+button {
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00aaff, #0077cc);
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0088cc, #005f99);
+    transform: scale(1.03);
+}
+
+/* Estilo das categorias */
+h2 {
+    margin-top: 40px;
+    color: #00aaff;
+    border-bottom: 1px solid #00aaff;
+    padding-bottom: 5px;
+}
+
+/* Blocos de alimentos em grid */
+.category {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px 20px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* Cada opção de alimento */
+.category label {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #eee;
+    font-size: 14px;
+}
+
+.category label:hover {
+    background-color: #2a2a2a;
+}
+
+.category input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    input, select, button {
+        font-size: 0.95em;
+    }
+
+    .category {
+        grid-template-columns: 1fr;
+    }
+}
